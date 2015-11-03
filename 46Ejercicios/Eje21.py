@@ -7,5 +7,14 @@ __author__ = 'romarin'
 # char_freq("abbabcbdbabdbdbabababcbcbab").
 
 
-def char_frew(string=''):
-    return True
+def char_freq(string=''):
+    dic = {}
+    for item in string:
+        if item in dic.keys():
+            dic[item] += 1
+        else:
+            dic[item] = 1
+    return dic
+
+
+print(char_freq("abbabcbdbabdbdbabababcbcbab"))
